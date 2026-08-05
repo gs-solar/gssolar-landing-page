@@ -2,6 +2,8 @@
  * Nastavenia projektu — jediné miesto, kde sa mení identita webu.
  * Texty sekcií sa upravujú v content.ts.
  */
+import { zaklad } from './url';
+
 export const site = {
   /** Názov firmy — používa sa v title, og:site_name a JSON-LD */
   nazovFirmy: 'GS Solar',
@@ -17,17 +19,17 @@ export const site = {
   gtmId: '',
 
   logo: {
-    src: '/images/img-399b42f8-273x47.png',
+    src: zaklad('/images/img-399b42f8-273x47.png'),
     alt: 'GS Solar – logo',
     width: 273,
     height: 47,
   },
 
-  favicon: '/images/favicon.png',
+  favicon: zaklad('/images/favicon.png'),
 
   /** Obrázok pre og:image (zdieľanie na sociálnych sieťach) */
   ogImage: {
-    src: '/images/img-6622086d-1200x.jpg',
+    src: zaklad('/images/img-6622086d-1200x.jpg'),
     width: 1200,
     height: 675,
   },

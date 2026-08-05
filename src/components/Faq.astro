@@ -1,4 +1,5 @@
 ---
+import { zaklad } from '../data/url';
 import { faq } from '../data/content';
 
 const lavyStlpec = faq.polozky.slice(0, 2);
@@ -27,7 +28,7 @@ const pravyStlpec = faq.polozky.slice(2);
                     {polozka.otazka}
                   </span>
                   <img
-                    src="/images/icon_02e24789.svg"
+                    src={zaklad('/images/icon_02e24789.svg')}
                     alt=""
                     class="h-[1.25rem] w-[1.25rem] shrink-0 transition-transform group-open:rotate-180"
                   />

@@ -1,4 +1,5 @@
 ---
+import { zaklad } from '../data/url';
 import { postup } from '../data/content';
 ---
 
@@ -18,7 +19,7 @@ import { postup } from '../data/content';
           {postup.cta}
         </a>
         <img
-          src="/images/icon_efe90b70.svg"
+          src={zaklad('/images/icon_efe90b70.svg')}
           alt=""
           class="pointer-events-none absolute top-[2.875rem] left-[14.8125rem] h-[4.3rem] w-auto"
         />
@@ -48,7 +49,7 @@ import { postup } from '../data/content';
         {postup.cta}
       </a>
       <img
-        src="/images/icon_efe90b70.svg"
+        src={zaklad('/images/icon_efe90b70.svg')}
         alt=""
         class="pointer-events-none absolute top-[2.5rem] left-[13.9rem] h-[2.8rem] w-auto"
       />

@@ -1,3 +1,5 @@
+import { zaklad } from './url';
+
 /**
  * Všetky texty stránky. Nastavenia webu (logo, GTM, kontakt…) sú v site.ts.
  */
@@ -12,7 +14,7 @@ export const hero = {
   nadpis: 'Plaťte menej za elektrinu',
   text: 'Inštalácia fotovoltaických panelov vám zníži účty za elektrinu a zvýši hodnotu vašej nehnuteľnosti. Zabezpečíme všetko od návrhu až po inštaláciu a revíziu.',
   cta: 'Mám záujem',
-  obrazok: '/images/naseprace3jpg1.webp',
+  obrazok: zaklad('/images/naseprace3jpg1.webp'),
 };
 
 /** Dve arch karty — Pre domácnosti / Pre firmy */
@@ -22,16 +24,16 @@ export const ponuky = [
     /** Text môže obsahovať HTML (napr. <b> pre zvýraznenie súm) */
     text: 'Znížte svoje mesačné náklady na elektrinu a staňte sa energeticky nezávislí. Využite aktuálnu zľavu <b>1 000 €</b> na inštaláciu fotovoltaických panelov. Kompletné riešenie na mieru od návrhu až po revíznu správu.',
     cta: 'Mám záujem',
-    ikona: '/images/icon_71a58e7f.svg',
-    obrazok: '/images/WhatsAppImage20240510at06573810.jpeg',
+    ikona: zaklad('/images/icon_71a58e7f.svg'),
+    obrazok: zaklad('/images/WhatsAppImage20240510at06573810.jpeg'),
     farbaKarty: 'light' as const,
   },
   {
     titulok: 'Pre firmy',
     text: 'Využite štátne dotácie pre mikro, malé a stredné podniky až do výšky <b>50 000 €</b>. Pomôžeme vám s celým procesom – od návrhu projektu, cez administratívu až po realizáciu a revíznu správu.',
     cta: 'Mám záujem',
-    ikona: '/images/icon_6d4af6ed.svg',
-    obrazok: '/images/WhatsAppImage20240510at065834101.jpeg',
+    ikona: zaklad('/images/icon_6d4af6ed.svg'),
+    obrazok: zaklad('/images/WhatsAppImage20240510at065834101.jpeg'),
     farbaKarty: 'pale' as const,
   },
 ];
@@ -41,19 +43,19 @@ export const strechy = {
   polozky: [
     {
       text: 'Konštrukcia na trapézové plechové strechy',
-      ikona: '/images/img-3a279efc-93x93.png',
+      ikona: zaklad('/images/img-3a279efc-93x93.png'),
     },
     {
       text: 'Konštrukcia na škridlovú strechu',
-      ikona: '/images/img-b9aafd09-80x80.png',
+      ikona: zaklad('/images/img-b9aafd09-80x80.png'),
     },
     {
       text: 'Konštrukcia na falcované plechové strechy',
-      ikona: '/images/img-9442a469-81x81.png',
+      ikona: zaklad('/images/img-9442a469-81x81.png'),
     },
     {
       text: 'Konštrukcia strechy s fatrafolom / gumoasfaltom',
-      ikona: '/images/img-3a279efc-93x93.png',
+      ikona: zaklad('/images/img-3a279efc-93x93.png'),
     },
   ],
 };
@@ -62,17 +64,17 @@ export const statistiky = [
   {
     cislo: '3 000+',
     popis: 'Nainštalovaných panelov',
-    ikona: '/images/icon_311a299e.svg',
+    ikona: zaklad('/images/icon_311a299e.svg'),
   },
   {
     cislo: '4-6 rokov',
     popis: 'Priemerná návratnosť investície',
-    ikona: '/images/icon_1048a2bf.svg',
+    ikona: zaklad('/images/icon_1048a2bf.svg'),
   },
   {
     cislo: '300+',
     popis: 'Spokojných zákazníkov',
-    ikona: '/images/icon_43cdd71a.svg',
+    ikona: zaklad('/images/icon_43cdd71a.svg'),
   },
 ];
 
@@ -144,12 +146,12 @@ export const faq = {
 export const prace = {
   nadpis: 'Niektoré naše práce',
   obrazky: [
-    { src: '/images/img-5b9b6f30-330x185.jpg', alt: 'Realizácia fotovoltaiky' },
-    { src: '/images/img-b2f004ef-331x185.jpg', alt: 'Realizácia fotovoltaiky' },
-    { src: '/images/img-9af0b6dc-329x185.jpg', alt: 'Realizácia fotovoltaiky' },
-    { src: '/images/img-ce26990a-330x185.jpg', alt: 'Realizácia fotovoltaiky' },
-    { src: '/images/img-1c3b9064-329x185.jpg', alt: 'Realizácia fotovoltaiky' },
-    { src: '/images/img-f6f6b656-328x184.jpg', alt: 'Realizácia fotovoltaiky' },
+    { src: zaklad('/images/img-5b9b6f30-330x185.jpg'), alt: 'Realizácia fotovoltaiky' },
+    { src: zaklad('/images/img-b2f004ef-331x185.jpg'), alt: 'Realizácia fotovoltaiky' },
+    { src: zaklad('/images/img-9af0b6dc-329x185.jpg'), alt: 'Realizácia fotovoltaiky' },
+    { src: zaklad('/images/img-ce26990a-330x185.jpg'), alt: 'Realizácia fotovoltaiky' },
+    { src: zaklad('/images/img-1c3b9064-329x185.jpg'), alt: 'Realizácia fotovoltaiky' },
+    { src: zaklad('/images/img-f6f6b656-328x184.jpg'), alt: 'Realizácia fotovoltaiky' },
   ],
 };
 

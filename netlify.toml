@@ -1,3 +1,11 @@
+# Stránka žije na https://go.gssolar.sk/fotovoltaika (base v astro.config.mjs).
+# Build vnorí dist do podpriečinka fotovoltaika, aby cesty sedeli s base.
 [build]
-  command = "npm run build"
-  publish = "dist"
+  command = "npm run build && mkdir -p _site/fotovoltaika && cp -R dist/. _site/fotovoltaika/ && cp dist/robots.txt _site/robots.txt"
+  publish = "_site"
+
+# Koreň domény presmeruj na landing page
+[[redirects]]
+  from = "/"
+  to = "/fotovoltaika/"
+  status = 302

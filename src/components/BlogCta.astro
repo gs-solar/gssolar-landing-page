@@ -1,4 +1,5 @@
 ---
+import { zaklad } from '../data/url';
 import { blog } from '../data/content';
 import { site } from '../data/site';
 ---
@@ -22,7 +23,7 @@ import { site } from '../data/site';
           {blog.cta}
         </a>
         <img
-          src="/images/icon_efe90b70.svg"
+          src={zaklad('/images/icon_efe90b70.svg')}
           alt=""
           class="pointer-events-none absolute top-[2.4375rem] left-[12.4rem] h-[3.125rem] w-auto md:left-[12.875rem] md:h-[4.3rem]"
         />
