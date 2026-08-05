@@ -11,7 +11,7 @@ const pravyStlpec = faq.polozky.slice(2);
       {faq.nadpis}
     </h2>
 
-    <div class="mt-[2.5rem] flex flex-col items-center gap-[1.5rem] md:mt-[3rem] md:flex-row md:items-start md:justify-center md:gap-[4.2rem]">
+    <div class="mt-[2.5rem] flex flex-col items-center gap-[1.5rem] md:mt-[3rem] md:flex-row md:items-stretch md:justify-center md:gap-[4.2rem]">
       {
         [lavyStlpec, pravyStlpec].map((stlpec, s) => (
           <div
@@ -21,7 +21,7 @@ const pravyStlpec = faq.polozky.slice(2);
             ]}
           >
             {stlpec.map((polozka) => (
-              <details open class="group bg-[#fffffe] p-[1.25rem]">
+              <details open class="group bg-[#fffffe] p-[1.25rem] md:grow">
                 <summary class="flex cursor-pointer list-none items-center justify-between gap-[0.625rem] bg-white p-[0.9375rem] pb-0 [&::-webkit-details-marker]:hidden">
                   <span class="font-heading text-[1.25rem] leading-[1.25] font-bold text-ink">
                     {polozka.otazka}
