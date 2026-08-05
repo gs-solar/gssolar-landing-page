@@ -19,7 +19,8 @@ export const hero = {
 export const ponuky = [
   {
     titulok: 'Pre domácnosti',
-    text: 'Znížte svoje mesačné náklady na elektrinu a staňte sa energeticky nezávislí. Využite aktuálnu zľavu 1 000 € na inštaláciu fotovoltaických panelov. Kompletné riešenie na mieru od návrhu až po revíznu správu.',
+    /** Text môže obsahovať HTML (napr. <b> pre zvýraznenie súm) */
+    text: 'Znížte svoje mesačné náklady na elektrinu a staňte sa energeticky nezávislí. Využite aktuálnu zľavu <b>1 000 €</b> na inštaláciu fotovoltaických panelov. Kompletné riešenie na mieru od návrhu až po revíznu správu.',
     cta: 'Mám záujem',
     ikona: '/images/icon_71a58e7f.svg',
     obrazok: '/images/WhatsAppImage20240510at06573810.jpeg',
@@ -27,7 +28,7 @@ export const ponuky = [
   },
   {
     titulok: 'Pre firmy',
-    text: 'Využite štátne dotácie pre mikro, malé a stredné podniky až do výšky 50 000 €. Pomôžeme vám s celým procesom – od návrhu projektu, cez administratívu až po realizáciu a revíznu správu.',
+    text: 'Využite štátne dotácie pre mikro, malé a stredné podniky až do výšky <b>50 000 €</b>. Pomôžeme vám s celým procesom – od návrhu projektu, cez administratívu až po realizáciu a revíznu správu.',
     cta: 'Mám záujem',
     ikona: '/images/icon_6d4af6ed.svg',
     obrazok: '/images/WhatsAppImage20240510at065834101.jpeg',

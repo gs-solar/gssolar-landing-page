@@ -34,9 +34,10 @@ const kartaFarby = {
             <h2 class="mt-[1rem] font-heading text-[1.75rem] leading-none font-bold text-ink md:mt-[1.5rem] md:text-[2rem]">
               {ponuka.titulok}
             </h2>
-            <p class="mt-[1rem] w-[17rem] text-[0.9375rem] leading-[1.4] text-ink md:mt-[1.3rem] md:w-[19rem] md:text-[1rem]">
-              {ponuka.text}
-            </p>
+            <p
+              class="mt-[1rem] w-[17rem] text-[0.9375rem] leading-[1.4] text-ink md:mt-[1.3rem] md:w-[19rem] md:text-[1rem]"
+              set:html={ponuka.text}
+            />
             {/* Button v karte — len desktop */}
             <a
               href="#kontakt"
