@@ -1,0 +1,45 @@
+---
+import { footer } from '../data/content';
+import { site } from '../data/site';
+---
+
+<footer id="kontakt" class="bg-cream">
+  <div class="relative mx-auto max-w-[75rem] px-4 py-[1.25rem] md:h-[14.0625rem] md:px-[1rem] md:py-0">
+    <div class="flex flex-col items-center md:block">
+      <a href={site.webUrl} target="_blank" rel="noopener noreferrer" class="mt-0 md:absolute md:top-[2rem] md:left-[1rem]">
+        <img
+          src={site.logo.src}
+          alt={site.logo.alt}
+          width={site.logo.width}
+          height={site.logo.height}
+          class="h-[1.5rem] w-auto md:h-[2.9375rem]"
+        />
+      </a>
+
+      <div class="mt-[1.5rem] flex items-center gap-[1.75rem] md:absolute md:top-[2.6875rem] md:right-[1.5rem] md:mt-0 md:gap-[1rem]">
+        <a href={site.socialneSiete.instagram} aria-label="Instagram">
+          <img src="/images/icon_c0b5d303.svg" alt="" class="h-[2.375rem] w-[2.375rem] md:h-[1.5625rem] md:w-[1.5625rem]" />
+        </a>
+        <a href={site.socialneSiete.facebook} aria-label="Facebook">
+          <img src="/images/icon_10e326d4.svg" alt="" class="h-[2.375rem] w-[2.375rem] md:h-[1.5625rem] md:w-[1.5625rem]" />
+        </a>
+      </div>
+
+      <div class="mt-[1.25rem] text-center text-[1.125rem] leading-[1.5] text-ink md:absolute md:top-[6.25rem] md:left-[1.5625rem] md:mt-0 md:text-left">
+        <p>{site.kontakt.sidlo}</p>
+        {site.kontakt.telefony.map((cislo) => (
+          <p>
+            <a href={`tel:${cislo.replaceAll(' ', '')}`} class="hover:text-brand">{cislo}</a>
+          </p>
+        ))}
+        <p>
+          <a href={`mailto:${site.kontakt.email}`} class="hover:text-brand">{site.kontakt.email}</a>
+        </p>
+      </div>
+
+      <p class="mt-[1.25rem] text-center text-[0.875rem] text-ink-soft md:absolute md:top-[11.5625rem] md:left-0 md:w-full md:mt-0">
+        {footer.copyright}
+      </p>
+    </div>
+  </div>
+</footer>

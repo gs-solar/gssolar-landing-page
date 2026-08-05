@@ -1,0 +1,20 @@
+---
+import { site } from '../data/site';
+---
+
+<header class="bg-cream/60 md:bg-transparent">
+  <div
+    class="mx-auto flex h-[4.6875rem] max-w-[75rem] items-center justify-center px-4 md:h-[6.25rem] md:justify-start md:px-5"
+  >
+    <a href="/">
+      <img
+        src={site.logo.src}
+        alt={site.logo.alt}
+        width={site.logo.width}
+        height={site.logo.height}
+        class="h-[2.0625rem] w-auto md:h-[2.6875rem]"
+        fetchpriority="high"
+      />
+    </a>
+  </div>
+</header>

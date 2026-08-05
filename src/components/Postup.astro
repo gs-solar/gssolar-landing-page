@@ -1,0 +1,55 @@
+---
+import { postup } from '../data/content';
+---
+
+<section class="bg-brand-light/60">
+  <div class="mx-auto max-w-[75rem] px-4 pt-[2.5rem] pb-[2.5rem] md:px-[2.875rem] md:pb-[3.25rem]">
+    <div class="md:flex md:items-start md:justify-between">
+      <h2 class="text-center font-heading text-[2rem] leading-tight font-bold text-ink md:pt-[1.1875rem] md:pl-[0.625rem] md:text-left md:text-[3.125rem]">
+        {postup.nadpis}
+      </h2>
+      {/* Desktop CTA s dekoratívnou šípkou */}
+      <div class="relative hidden md:block">
+        <a
+          href="#kontakt"
+          class="inline-flex h-[5.5rem] w-[20.5rem] items-center justify-center rounded-[1.6875rem] bg-brand text-[1.375rem] font-bold text-white transition hover:opacity-90"
+        >
+          {postup.cta}
+        </a>
+        <img
+          src="/images/icon_efe90b70.svg"
+          alt=""
+          class="pointer-events-none absolute top-[2.875rem] left-[14.8125rem] h-[4.3rem] w-auto"
+        />
+      </div>
+    </div>
+
+    <div class="mt-[1.75rem] flex flex-col items-center gap-[0.75rem] md:mt-[2rem] md:flex-row md:justify-between md:gap-[3.25rem]">
+      {
+        postup.kroky.map((krok, i) => (
+          <div class="flex h-[10.9375rem] w-[10.9375rem] flex-col items-center justify-center rounded-[1.25rem] bg-ink px-3 text-center md:h-[15.5rem] md:w-auto md:flex-1 md:px-5">
+            <p class="font-heading text-[1.75rem] leading-none font-bold text-cream md:text-[2rem]">{i + 1}.</p>
+            <p class="mt-[0.75rem] font-heading text-[1.125rem] leading-[1.15] font-bold text-cream md:mt-[1.1rem] md:text-[1.375rem] md:leading-none">
+              {krok}
+            </p>
+          </div>
+        ))
+      }
+    </div>
+
+    {/* Mobil CTA s dekoratívnou šípkou */}
+    <div class="relative mx-auto mt-[2.5rem] w-fit md:hidden">
+      <a
+        href="#kontakt"
+        class="inline-flex h-[3.9375rem] w-[17.5625rem] items-center justify-center rounded-[1.6875rem] bg-brand text-[1.25rem] font-bold text-white transition hover:opacity-90"
+      >
+        {postup.cta}
+      </a>
+      <img
+        src="/images/icon_efe90b70.svg"
+        alt=""
+        class="pointer-events-none absolute top-[2.5rem] left-[13.9rem] h-[2.8rem] w-auto"
+      />
+    </div>
+  </div>
+</section>

@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+:root {
+  interpolate-size: allow-keywords;
+}
+
+@theme {
+  --font-heading: "Poppins", sans-serif;
+  --font-body: "Poppins", sans-serif;
+  /* Farby z pôvodného Landingi dizajnu */
+  --color-brand: #f7b419; /* žltá — CTA, mená v recenziách */
+  --color-brand-light: #fbda8c; /* svetlá žltá — pásy sekcií, arch karta */
+  --color-brand-pale: #fef4dd; /* najsvetlejšia žltá — karty recenzií */
+  --color-cream: #fffef5; /* krémové pozadie */
+  --color-ink: #191918; /* takmer čierna — text a tmavé karty */
+  --color-ink-soft: #251b04; /* copyright vo footeri */
+  /* Zachované pre dakujeme.astro z template */
+  --color-brand-dark: #191918;
+  --color-pill: #f7b419;
+}
+
+/* Dekoratívny fixný SVG pattern presvitá cez polopriehľadné pozadia sekcií */
+body {
+  background-color: #fff;
+  background-image: url("/images/icon_9dbd7e22.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}

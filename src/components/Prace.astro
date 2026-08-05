@@ -1,0 +1,26 @@
+---
+import { prace } from '../data/content';
+---
+
+<section class="bg-cream/60">
+  <div class="mx-auto max-w-[75rem] px-4 py-[3.25rem] md:px-[3.9375rem] md:pt-[3.3125rem] md:pb-[4rem]">
+    <h2 class="text-center font-heading text-[2rem] leading-tight font-bold text-ink md:text-[3.125rem]">
+      {prace.nadpis}
+    </h2>
+    <div class="mt-[2.5rem] grid grid-cols-1 gap-[1.25rem] md:mt-[3rem] md:grid-cols-3 md:gap-x-[2.6rem] md:gap-y-[1.9rem]">
+      {
+        prace.obrazky.map((obrazok) => (
+          <img
+            src={obrazok.src}
+            alt={obrazok.alt}
+            width="330"
+            height="185"
+            loading="lazy"
+            decoding="async"
+            class="h-auto w-full"
+          />
+        ))
+      }
+    </div>
+  </div>
+</section>

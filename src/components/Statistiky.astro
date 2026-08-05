@@ -1,0 +1,21 @@
+---
+import { statistiky } from '../data/content';
+---
+
+<section class="bg-cream md:bg-transparent">
+  <div
+    class="mx-auto flex max-w-[75rem] flex-col items-center gap-[2.5rem] px-4 py-[2.25rem] md:h-[17.75rem] md:flex-row md:items-start md:justify-center md:gap-[7.5rem] md:pt-[2.6875rem]"
+  >
+    {
+      statistiky.map((stat) => (
+        <div class="flex w-[18.75rem] flex-col items-center text-center">
+          <img src={stat.ikona} alt="" width="72" height="72" class="h-[4.5rem] w-[4.5rem]" />
+          <p class="mt-[1.5rem] font-heading text-[1.75rem] leading-none font-bold text-ink md:mt-[2.125rem] md:text-[3.125rem]">
+            {stat.cislo}
+          </p>
+          <p class="mt-[0.75rem] text-[1rem] text-ink">{stat.popis}</p>
+        </div>
+      ))
+    }
+  </div>
+</section>

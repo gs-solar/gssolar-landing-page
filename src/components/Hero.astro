@@ -1,0 +1,36 @@
+---
+import { hero } from '../data/content';
+---
+
+<section class="bg-cream/60 md:bg-transparent md:bg-[url('/images/icon_a3fbd219.svg')] md:bg-top md:bg-no-repeat">
+  <div class="relative mx-auto max-w-[75rem] md:h-[43.8125rem]">
+    <!-- Žltý štvrťkruh vykúkajúci spod fotky vľavo dole -->
+    <div
+      class="absolute top-[21.875rem] left-0 hidden h-[17.5625rem] w-[21.875rem] rounded-tr-[15.625rem] bg-brand-light md:block"
+      aria-hidden="true"
+    >
+    </div>
+    <!-- Fotka s veľkým oblúkom vpravo dole -->
+    <div
+      class="absolute top-0 left-[1.875rem] hidden h-[36.625rem] w-[32.6875rem] rounded-br-[15.625rem] bg-[#e3e3e3] bg-[image:var(--hero-img)] bg-fixed bg-top bg-no-repeat md:block"
+      style={`--hero-img: url('${hero.obrazok}')`}
+      aria-hidden="true"
+    >
+    </div>
+
+    <div class="px-4 py-[3.25rem] text-center md:absolute md:top-[15.875rem] md:left-[45.1875rem] md:w-[28.75rem] md:p-0 md:text-left">
+      <h1 class="font-heading text-[2rem] leading-none font-bold text-ink md:text-[4.3125rem]">
+        {hero.nadpis}
+      </h1>
+      <p class="mt-[2.25rem] text-[1rem] leading-[1.4] font-light text-ink md:mt-[2.4375rem] md:text-[1.125rem]">
+        {hero.text}
+      </p>
+      <a
+        href="#kontakt"
+        class="mt-[2.5rem] hidden h-[3.5rem] w-[12.5rem] items-center justify-center rounded-[1.6875rem] bg-brand text-[1rem] font-bold text-white transition hover:opacity-90 md:ml-[1.0625rem] md:inline-flex"
+      >
+        {hero.cta}
+      </a>
+    </div>
+  </div>
+</section>

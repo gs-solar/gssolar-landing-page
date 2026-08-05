@@ -1,0 +1,7 @@
+/* Doplnkove styly cistej verzie */
+html { scroll-behavior: smooth; }
+
+/* accordion: zatvorene polozky, .open rozbali (sipku otaca landend-base.css).
+   !important prebija ID-scoped pravidla z base.css. */
+.widget-accordion .accordion-desc-text { display: none !important; }
+.widget-accordion .accordion-element-container.open .accordion-desc-text { display: block !important; }

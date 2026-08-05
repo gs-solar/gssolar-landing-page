@@ -1,0 +1,32 @@
+---
+import { blog } from '../data/content';
+import { site } from '../data/site';
+---
+
+<section class="bg-brand-light/60">
+  <div class="mx-auto max-w-[75rem] px-4 py-[2.75rem] md:pt-[3.3125rem] md:pb-[3.5rem]">
+    <h2 class="text-center font-heading text-[2rem] leading-tight font-bold text-ink md:text-[3.125rem]">
+      {blog.nadpis}
+    </h2>
+    <div class="mt-[2rem] flex flex-col items-center gap-[2rem] md:mt-[2.75rem] md:flex-row md:justify-center md:gap-[4rem]">
+      <p class="max-w-[34.0625rem] text-center text-[1.375rem] leading-[1.4] text-ink">
+        {blog.text}
+      </p>
+      <div class="relative">
+        <a
+          href={site.blogUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="inline-flex h-[4.25rem] w-[16.125rem] items-center justify-center rounded-[1.6875rem] bg-brand text-center text-[1.25rem] leading-tight font-bold text-white transition hover:opacity-90 md:h-[4.5625rem] md:w-[17.6875rem] md:text-[1.375rem]"
+        >
+          {blog.cta}
+        </a>
+        <img
+          src="/images/icon_efe90b70.svg"
+          alt=""
+          class="pointer-events-none absolute top-[2.4375rem] left-[12.4rem] h-[3.125rem] w-auto md:left-[12.875rem] md:h-[4.3rem]"
+        />
+      </div>
+    </div>
+  </div>
+</section>
