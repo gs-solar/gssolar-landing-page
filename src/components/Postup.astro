@@ -25,10 +25,10 @@ import { postup } from '../data/content';
       </div>
     </div>
 
-    <div class="mt-[1.75rem] flex flex-col items-center gap-[0.75rem] md:mt-[2rem] md:flex-row md:justify-between md:gap-[3.25rem]">
+    <div class="mt-[1.75rem] grid grid-cols-2 gap-[0.75rem] md:mt-[2rem] md:flex md:flex-row md:justify-between md:gap-[3.25rem]">
       {
         postup.kroky.map((krok, i) => (
-          <div class="flex h-[10.9375rem] w-[10.9375rem] flex-col items-center justify-center rounded-[1.25rem] bg-ink px-3 text-center md:h-[15.5rem] md:w-auto md:flex-1 md:px-5">
+          <div class="flex min-h-[10.9375rem] w-full flex-col items-center justify-center rounded-[1.25rem] bg-ink px-3 py-4 text-center md:h-[15.5rem] md:min-h-0 md:w-auto md:flex-1 md:px-5 md:py-0">
             <p class="font-heading text-[1.75rem] leading-none font-bold text-cream md:text-[2rem]">{i + 1}.</p>
             <p class="mt-[0.75rem] font-heading text-[1.125rem] leading-[1.15] font-bold text-cream md:mt-[1.1rem] md:text-[1.375rem] md:leading-none">
               {krok}
