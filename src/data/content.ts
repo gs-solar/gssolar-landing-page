@@ -163,30 +163,81 @@ export const footer = {
   copyright: '© 2025 GS Solar',
 };
 
-/** Ponechané pre KontaktForm.astro z template (formulár zatiaľ nie je na stránke) */
+/** Polia popup formulára (KontaktPopup.astro) — odosiela sa cez Netlify Forms */
+type Pole =
+  | {
+      typ: 'text' | 'email' | 'tel' | 'textarea';
+      name: string;
+      label: string;
+      placeholder?: string;
+      povinne?: boolean;
+      /** Pole zaberá celý riadok formulára (inak sú polia v dvoch stĺpcoch) */
+      celyRiadok?: boolean;
+    }
+  | {
+      typ: 'select';
+      name: string;
+      label: string;
+      placeholder: string;
+      moznosti: string[];
+      celyRiadok?: boolean;
+    };
+
 export const formular = {
-  nadpis: 'Získajte nezáväznú cenovú ponuku',
-  podnadpis:
-    'Vyplňte formulár a do 24 hodín vás kontaktujeme s návrhom riešenia a orientačnou kalkuláciou.',
-  polia: {
-    meno: 'Meno',
-    email: 'Email',
-    telefon: 'Telefónne číslo',
-    mesto: 'Mesto / Obec',
-    typProjektu: 'Typ projektu',
-    typStrechy: 'Typ strechy',
-    poznamka: 'Poznámka',
+  nazovFormulara: 'cenova-ponuka',
+  polia: [
+    {
+      typ: 'text',
+      name: 'meno',
+      label: 'Meno a priezvisko',
+      placeholder: 'Meno a priezvisko',
+      povinne: true,
+    },
+    { typ: 'email', name: 'email', label: 'Email', placeholder: 'Email', povinne: true },
+    { typ: 'tel', name: 'telefon', label: 'Telefón', placeholder: 'Telefón', povinne: true },
+    {
+      typ: 'select',
+      name: 'typ-strechy',
+      label: 'Aký typ strechy/krytiny máte?',
+      placeholder: 'Vyberte z možností',
+      moznosti: ['Trapézový plech', 'Škridla', 'Falcovaný plech', 'Fatrafol / gumoasfalt', 'Iné'],
+    },
+    {
+      typ: 'select',
+      name: 'rocna-spotreba',
+      label: 'Aká je vaša ročná spotreba v KWh?',
+      placeholder: 'Vyberte z možností',
+      moznosti: ['Do 3 000 kWh', '3 000 – 5 000 kWh', '5 000 – 10 000 kWh', 'Viac ako 10 000 kWh', 'Neviem'],
+    },
+    {
+      typ: 'select',
+      name: 'rozpocet',
+      label: 'Aký je váš rozpočet na inštaláciu solárnych panelov?',
+      placeholder: 'Vyberte z možností',
+      moznosti: ['Do 5 000 €', '5 000 – 10 000 €', '10 000 – 15 000 €', 'Viac ako 15 000 €', 'Neviem'],
+    },
+    {
+      typ: 'select',
+      name: 'osoba-firma',
+      label: 'Hľadáte ponuku ako súkromná osoba alebo firma?',
+      placeholder: 'Vyberte možnosť',
+      moznosti: ['Súkromná osoba', 'Firma'],
+    },
+    {
+      typ: 'select',
+      name: 'financovanie',
+      label: 'Máte záujem o financovanie nákupu solárnych panelov na splátky?',
+      placeholder: 'Možné len pre súkromné osoby',
+      moznosti: ['Áno', 'Nie'],
+    },
+    { typ: 'text', name: 'lokalita', label: 'Aká je vaša lokalita (mesto alebo obec)?', celyRiadok: true },
+    { typ: 'textarea', name: 'otazky', label: 'Máte nejaké otázky?', celyRiadok: true },
+  ] satisfies Pole[],
+  gdpr: {
+    text: 'Súhlasím so spracovaním osobných údajov',
+    url: 'https://gssolar.sk/ochrana-sukromia/',
   },
-  typProjektuMoznosti: ['Domácnosť', 'Firma'],
-  typStrechyMoznosti: [
-    'Trapézový plech',
-    'Škridla',
-    'Falcovaný plech',
-    'Fatrafol / gumoasfalt',
-    'Iné',
-  ],
-  gdprText: 'Súhlasím so spracovaním osobných údajov',
-  odoslat: 'Získať cenovú ponuku zdarma',
+  odoslat: 'Odoslať dopyt',
 };
 
 export const dakujeme = {

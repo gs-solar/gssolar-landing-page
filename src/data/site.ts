@@ -42,7 +42,7 @@ export const site = {
   },
 
   /** URL stránky s ochranou osobných údajov (GDPR) */
-  gdprUrl: 'https://gssolar.sk/',
+  gdprUrl: 'https://gssolar.sk/ochrana-sukromia/',
 
   kontakt: {
     email: 'info@gssolar.sk',
