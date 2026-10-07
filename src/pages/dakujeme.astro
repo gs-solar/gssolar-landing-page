@@ -12,6 +12,11 @@ import { site } from '../data/site';
   description="Vaša žiadosť o cenovú ponuku bola úspešne odoslaná. Ozveme sa vám do 24 hodín."
 >
   <meta name="robots" content="noindex" slot="head" />
+  <script is:inline>
+    // Konverzný event pre GTM/GA4 — stránka /dakujeme/ sa zobrazí len po odoslaní formulára.
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'generate_lead' });
+  </script>
   <Header />
   <section class="bg-white">
     <div class="mx-auto flex max-w-2xl flex-col items-center px-4 py-28 text-center md:py-36">
